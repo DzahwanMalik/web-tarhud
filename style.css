@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900');
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.swiper-slide:hover button {
+    background-color: oklch(68.1% 0.162 75.834);
+}
+
+.swiper-slide:hover button i {
+    color: white;
+}
+
+#video:hover .video-transition {
+    animation: var(--openTransition);
+}
+
+:root {
+    --sway: sway 2s ease-in-out infinite alternate;
+    --slideDown: slideDown 2s ease-in-out;
+    --slideUp: slideUp 2s ease-in-out;
+    --zoomIn: zoomIn 11s ease-in-out infinite alternate;
+    --openTransition: openTransition 1s ease-in-out;
+    --transparentBlack: rgba(0, 0, 0, .5);
+}
+
+@keyframes sway {
+    0% {
+        transform: rotateY(-10deg);
+    }
+
+    100% {
+        transform: rotateY(10deg);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1.1) rotate(1deg);
+    }
+}
+
+@keyframes openTransition {
+    0% {
+        width: 0;
+        opacity: .3;
+    }
+
+    50% {
+        width: 100vw;
+        opacity: .3;
+    }
+
+    100% {
+        width: 100vw;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+}
