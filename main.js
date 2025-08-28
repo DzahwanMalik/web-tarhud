@@ -1,3 +1,25 @@
+// AOS
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: "aos-init", // class applied after initialization
+  animatedClassName: "aos-animate", // class applied on animation
+  useClassNames: true, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  easing: "ease-in-sine", // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+});
+
 // Fixed Navbar
 const navbar = document.getElementById("navbar");
 
@@ -34,14 +56,133 @@ window.addEventListener("scroll", () => {
 });
 
 // Navbar Dropdown
-const profilNav = document.getElementById('nav-profil');
-const profilDropdown = document.getElementById('profil-dropdown');
+const profilNav = document.getElementById("nav-profil");
+const profilDropdown = document.getElementById("profil-dropdown");
 
-profilNav.addEventListener('mouseover', () => {
-  profilDropdown.classList.remove('rotate-y-90');
-  profilDropdown.classList.remove('opacity-0');
-  profilDropdown.classList.add('rotate-y-0');
-  profilDropdown.classList.add('opacity-100');
+const profilNavPimpinan = document.getElementById("nav-profil-pimpinan");
+const profilDropdownPimpinan = document.getElementById(
+  "profil-dropdown-pimpinan"
+);
+
+const galleryNav = document.getElementById("nav-gallery");
+const galleryDropdown = document.getElementById("gallery-dropdown");
+
+// Dropdown Profil
+profilNav.addEventListener("mouseover", () => {
+  profilDropdown.classList.remove("rotate-x-90");
+  profilDropdown.classList.remove("opacity-0");
+  profilDropdown.classList.add("rotate-x-0");
+  profilDropdown.classList.add("opacity-100");
+});
+
+profilDropdown.addEventListener("mouseover", () => {
+  profilDropdown.classList.remove("rotate-x-90");
+  profilDropdown.classList.remove("opacity-0");
+  profilDropdown.classList.add("rotate-x-0");
+  profilDropdown.classList.add("opacity-100");
+});
+
+profilNav.addEventListener("mouseleave", () => {
+  profilDropdown.classList.remove("rotate-x-0");
+  profilDropdown.classList.remove("opacity-100");
+  profilDropdown.classList.add("rotate-x-90");
+  profilDropdown.classList.add("opacity-0");
+});
+
+profilDropdown.addEventListener("mouseleave", () => {
+  profilDropdown.classList.remove("rotate-x-0");
+  profilDropdown.classList.remove("opacity-100");
+  profilDropdown.classList.add("rotate-x-90");
+  profilDropdown.classList.add("opacity-0");
+});
+
+// Dropdown Profil Pimpinan
+profilNavPimpinan.addEventListener("mouseover", () => {
+  profilDropdownPimpinan.classList.remove("rotate-x-90");
+  profilDropdownPimpinan.classList.remove("opacity-0");
+  profilDropdownPimpinan.classList.add("rotate-x-0");
+  profilDropdownPimpinan.classList.add("opacity-100");
+});
+
+profilDropdownPimpinan.addEventListener("mouseover", () => {
+  profilDropdownPimpinan.classList.remove("rotate-x-90");
+  profilDropdownPimpinan.classList.remove("opacity-0");
+  profilDropdownPimpinan.classList.add("rotate-x-0");
+  profilDropdownPimpinan.classList.add("opacity-100");
+});
+
+profilNavPimpinan.addEventListener("mouseleave", () => {
+  profilDropdownPimpinan.classList.remove("rotate-x-0");
+  profilDropdownPimpinan.classList.remove("opacity-100");
+  profilDropdownPimpinan.classList.add("rotate-x-90");
+  profilDropdownPimpinan.classList.add("opacity-0");
+});
+
+profilDropdownPimpinan.addEventListener("mouseleave", () => {
+  profilDropdownPimpinan.classList.remove("rotate-x-0");
+  profilDropdownPimpinan.classList.remove("opacity-100");
+  profilDropdownPimpinan.classList.add("rotate-x-90");
+  profilDropdownPimpinan.classList.add("opacity-0");
+});
+
+// Dropdown Gallery
+galleryNav.addEventListener("mouseover", () => {
+  galleryDropdown.classList.remove("rotate-x-90");
+  galleryDropdown.classList.remove("opacity-0");
+  galleryDropdown.classList.add("rotate-x-0");
+  galleryDropdown.classList.add("opacity-100");
+});
+
+galleryDropdown.addEventListener("mouseover", () => {
+  galleryDropdown.classList.remove("rotate-x-90");
+  galleryDropdown.classList.remove("opacity-0");
+  galleryDropdown.classList.add("rotate-x-0");
+  galleryDropdown.classList.add("opacity-100");
+});
+
+galleryNav.addEventListener("mouseleave", () => {
+  galleryDropdown.classList.remove("rotate-x-0");
+  galleryDropdown.classList.remove("opacity-100");
+  galleryDropdown.classList.add("rotate-x-90");
+  galleryDropdown.classList.add("opacity-0");
+});
+
+galleryDropdown.addEventListener("mouseleave", () => {
+  galleryDropdown.classList.remove("rotate-x-0");
+  galleryDropdown.classList.remove("opacity-100");
+  galleryDropdown.classList.add("rotate-x-90");
+  galleryDropdown.classList.add("opacity-0");
+});
+
+// Statistic Number Counter
+const statistic = document.getElementById("statistic");
+window.addEventListener("scroll", () => {
+  const statisticRect = statistic.getBoundingClientRect();
+  const statisticOffsetBottom = window.innerHeight - statisticRect.bottom;
+  const myCounters = document.querySelectorAll(".counter");
+
+  console.log(statisticOffsetBottom);
+
+  myCounters.forEach((myCounter) => {
+    if (statisticOffsetBottom > 0) {
+      function updateCounter() {
+        const target = +myCounter.dataset.count;
+
+        const c = +myCounter.textContent;
+
+        const increment = target / 500;
+
+        if (c < target) {
+          myCounter.textContent = `${Math.ceil(c + increment)}`;
+          setTimeout(updateCounter, 50);
+        } else {
+          myCounter.textContent = target;
+        }
+      }
+
+      updateCounter();
+    }
+  });
 });
 
 // Accordion
@@ -206,47 +347,47 @@ function nextAlert() {
 }
 
 // Nav Menu
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const hamburgerMenu = document.getElementById('hamburgerMenu');
-const navLists = document.querySelectorAll('#navList li');
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const hamburgerMenu = document.getElementById("hamburgerMenu");
+const navLists = document.querySelectorAll("#navList li");
 
-hamburgerBtn.addEventListener('click', () => {
-  if(hamburgerMenu.classList.contains('-translate-x-full')) {
-    hamburgerMenu.classList.remove('-translate-x-full');
-    hamburgerMenu.classList.add('translate-x-0');
+hamburgerBtn.addEventListener("click", () => {
+  if (hamburgerMenu.classList.contains("-translate-x-full")) {
+    hamburgerMenu.classList.remove("-translate-x-full");
+    hamburgerMenu.classList.add("translate-x-0");
 
-    navLists.forEach(list => {
-      list.classList.add('opacity-0');
-      list.classList.add('-translate-x-2');
-      list.classList.add('transition-all');
-      list.classList.add('duration-300');
-      list.classList.add('ease-in-out');
+    navLists.forEach((list) => {
+      list.classList.add("opacity-0");
+      list.classList.add("-translate-x-2");
+      list.classList.add("transition-all");
+      list.classList.add("duration-300");
+      list.classList.add("ease-in-out");
     });
 
     navLists.forEach((list, index) => {
       setTimeout(() => {
-        list.classList.remove('opacity-0');
-        list.classList.add('opacity-100');
-        list.classList.remove('-translate-x-2');
-        list.classList.add('translate-x-0');
-      }, 500 + (index * 300));
+        list.classList.remove("opacity-0");
+        list.classList.add("opacity-100");
+        list.classList.remove("-translate-x-2");
+        list.classList.add("translate-x-0");
+      }, 500 + index * 300);
     });
   } else {
-    hamburgerMenu.classList.remove('translate-x-0');
-    hamburgerMenu.classList.add('-translate-x-full');
+    hamburgerMenu.classList.remove("translate-x-0");
+    hamburgerMenu.classList.add("-translate-x-full");
 
-    navLists.forEach(list => {
-      list.classList.remove('opacity-100');
-      list.classList.add('opacity-0');
-      list.classList.remove('translate-x-0');
-      list.classList.add('-translate-x-2');
+    navLists.forEach((list) => {
+      list.classList.remove("opacity-100");
+      list.classList.add("opacity-0");
+      list.classList.remove("translate-x-0");
+      list.classList.add("-translate-x-2");
     });
   }
 });
 
-navLists.forEach(list => {
-  list.addEventListener('click', () => {
-    hamburgerMenu.classList.remove('translate-x-0');
-    hamburgerMenu.classList.add('-translate-x-full');
+navLists.forEach((list) => {
+  list.addEventListener("click", () => {
+    hamburgerMenu.classList.remove("translate-x-0");
+    hamburgerMenu.classList.add("-translate-x-full");
   });
 });

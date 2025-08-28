@@ -17,6 +17,12 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!-- AOS CSS -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+     <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Main JS -->
     <script defer src="main.js"></script>
 
@@ -53,7 +59,7 @@
     <header class="">
       <!-- Navbar -->
       <nav
-        class="absolute z-20 w-full flex justify-center items-center font-semibold text-white duration-500 ease-in-out animate-[var(--slideDown)]"
+        class="absolute z-20 w-full flex justify-center items-center font-semibold text-white transition-all duration-500 ease-in-out animate-[var(--slideDown)]"
         id="navbar"
       >
         <div class="max-w-[1444px] w-full flex gap-20 justify-between items-center py-5 px-5">
@@ -68,20 +74,32 @@
           </div>
           <div class="max-lg:hidden">
             <ul class="flex gap-10">
-              <li><a href="#home">Beranda</a></li>
+              <li><a href="#home" class="cursor-pointer py-3 transition-colors duration-300 ease-in-out hover:text-yellow-600">Beranda</a></li>
               <li class="relative">
-                <a onclick="openAlert()" class="cursor-pointer" id="nav-profil">Profil<i class="fa-solid fa-angle-down ms-3"></i></a>
-                <div class="absolute top-10 left-0 bg-yellow-600 rounded-md rotate-y-90 opacity-0 transition-all duration-300 ease-in-out" id="profil-dropdown">
-                  <a href="" class="block whitespace-nowrap p-3">Profil Pondok</a>
-                  <a href="" class="block whitespace-nowrap p-3">Profil Pimpinan</a>
+                <a href="#" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600" id="nav-profil">Profil<i class="fa-solid fa-angle-down ms-3"></i></a>
+                <div class="absolute top-10 -left-5 font-medium rounded-sm bg-white text-sm rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl" id="profil-dropdown">
+                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Profil Pondok</a>
+                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Profil Pendiri</a>
+                  <a class="cursor-pointer block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200" id="nav-profil-pimpinan">Profil Pimpinan <i class="fa-solid fa-angle-right"></i></a>
+                  <div class="absolute top-10 -right-44 font-medium rounded-sm bg-white rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl" id="profil-dropdown-pimpinan">
+                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Yayasan</a>
+                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Direktur TMI</a>
+                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Sekolah MA</a>
+                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Sekolah MTs</a>
+                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Sekolah MI</a>
+                  </div>
                 </div>
               </li>
-              <li>
-                <a onclick="openAlert()" class="cursor-pointer">Gallery<i class="fa-solid fa-angle-down ms-3"></i></a>
+              <li class="relative">
+                <a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600" id="nav-gallery">Gallery<i class="fa-solid fa-angle-down ms-3"></i></a>
+                <div class="absolute top-10 -left-5 font-medium rounded-sm bg-white text-sm rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl" id="gallery-dropdown">
+                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Gallery Foto</a>
+                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Gallery Video</a>
+                </div>
               </li>
-              <li><a onclick="openAlert()" class="cursor-pointer">Berita</a></li>
-              <li><a onclick="openAlert()" class="cursor-pointer">Pendaftaran</a></li>
-              <li><a onclick="openAlert()" class="cursor-pointer">Kontak</a></li>
+              <li><a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600">Berita</a></li>
+              <li><a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600">Pendaftaran</a></li>
+              <li><a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600">Kontak</a></li>
             </ul>
           </div>
           <div class="max-lg:hidden">
@@ -99,7 +117,7 @@
         </div>
 
           <!-- Nav Menu -->
-        <div class="bg-yellow-600 absolute top-full -translate-x-full z-20 w-screen min-h-screen p-5 transition-all duration-500 ease-in-out" id="hamburgerMenu">
+        <div class="bg-yellow-600 absolute top-full -translate-x-full z-20 w-full h-screen p-5 transition-all duration-500 ease-in-out" id="hamburgerMenu">
           <ul class="flex flex-col gap-10 text-white" id="navList">
             <li><a href="#home">Beranda</a></li>
             <li>
@@ -223,6 +241,8 @@
       <!-- Statistic -->
       <section
         class="max-w-[1444px] w-full bg-white relative col-span-2 p-15 shadow-2xl rounded-xl max-lg:p-10"
+        data-aos="fade-up"
+        id="statistic"
       >
         <div class="flex gap-20 flex-wrap">
           <div class="grow text-center flex gap-3 justify-center items-center">
@@ -232,7 +252,7 @@
               ></i>
             </div>
             <div class="text-start">
-              <h1 class="text-2xl font-bold max-lg:text-xl">200+ Pengajar</h1>
+              <h1 class="text-2xl font-bold max-lg:text-xl"><span data-count="200" class="counter">0</span>+ Pengajar</h1>
               <p class="text-sm text-gray-400 max-lg:text-xs">
                 Pengajar Berpengalaman
               </p>
@@ -245,7 +265,7 @@
               ></i>
             </div>
             <div class="text-start">
-              <h1 class="text-2xl font-bold max-lg:text-xl">1000+ Santri</h1>
+              <h1 class="text-2xl font-bold max-lg:text-xl"><span data-count="1000" class="counter">0</span>+ Santri</h1>
               <p class="text-sm text-gray-400 max-lg:text-xs">
                 Dari Berbagai Daerah
               </p>
@@ -258,7 +278,7 @@
               ></i>
             </div>
             <div class="text-start">
-              <h1 class="text-2xl font-bold max-lg:text-xl">850+ Alumni</h1>
+              <h1 class="text-2xl font-bold max-lg:text-xl"><span data-count="850" class="counter">0</span>+ Alumni</h1>
               <p class="text-sm text-gray-400 max-lg:text-xs">Yang Tersebar</p>
             </div>
           </div>
@@ -266,11 +286,11 @@
       </section>
 
       <!-- Swiper -->
-      <section class="relative col-span-2 w-full max-w-[1444px]">
+      <section class="relative col-span-2 w-full max-w-[1444px]" data-aos="fade-up">
         <div class="swiper">
           <div class="card-wrapper mt-0 pb-16 pt-5 px-2 overflow-hidden md:mx-16">
             <ul class="swiper-wrapper w-full">
-              <li class="swiper-slide">
+              <li class="swiper-slide" data-aos="zoom-in-down">
                 <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
                   <div class="w-full h-80">
                   <img
@@ -297,7 +317,7 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="100">
                 <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
                   <div class="w-full h-80">
                   <img
@@ -324,7 +344,7 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="200">
                 <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
                   <div class="w-full h-80">
                   <img
@@ -351,7 +371,7 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="300">
                 <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
                   <div class="w-full h-80">
                   <img
@@ -378,7 +398,7 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide">
+              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="400">
                 <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
                   <div class="w-full h-80">
                   <img
@@ -417,11 +437,11 @@
 
       <!-- Profile -->
        <section class="max-w-[1444px] col-span-2 grid items-center grid-cols-1 gap-5 lg:grid-cols-2 mx-5">
-        <div class="relative h-full rounded-2xl overflow-hidden" id="video">
+        <div class="relative h-full rounded-2xl overflow-hidden" id="video" data-aos="fade-right">
           <img src="assets/profile/profile-bg.jpg" alt="" class="w-full h-full object-cover object-center">
           <div class="video-transition absolute z-10 top-1/2 left-1/2 -translate-1/2 rotate-45 h-screen bg-white"></div>
         </div>
-        <div class="flex flex-col justify-center items-center lg:ps-10">
+        <div class="flex flex-col justify-center items-center lg:ps-10" data-aos="fade-left" data-aos-delay="600">
           <div>
             <p class="font-semibold text-yellow-600 text-xs lg:text-xl">| Selamat Datang di Pondok Pesantren Tarbiyatul Huda</p>
             <h1 class="font-bold text-2xl my-3 lg:text-5xl lg:my-6">Masa Depanmu Dimulai Dari Sini!</h1>
@@ -444,7 +464,7 @@
        <!-- PSB -->
         <section class="w-full col-span-2 flex justify-center bg-yellow-600 px-5 py-20">
           <div class="max-w-[1444px] flex gap-5 flex-col justify-center items-center lg:flex-row">
-            <div class="basis-2/3 mb-5 lg:pr-10">
+            <div class="basis-2/3 mb-5 lg:pr-10" data-aos="fade-up">
               <h1 class="text-white text-4xl font-semibold mb-5 lg:text-6xl">Siap Bergabung dengan Tarbiyatul Huda?</h1>
               <p class="text-white lg:text-xl">Daftarkan dirimu sekarang dan mulailah perjalanan akademik bersama Tarbiyatul Huda. Masa depan cemerlang ada di depan mata!</p>
             </div>
@@ -453,6 +473,8 @@
                   class="inline-block rounded border border-yellow-600 bg-white px-5 py-3 font-medium text-yellow-600 shadow-sm transition-colors mb-3 hover:bg-yellow-700 hover:text-white"
                   href="https://wa.me/6285693415051"
                   target="_blank"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
                 >
                   Mau Konsultasi Dulu<i class="fa-solid fa-angle-right ms-1"></i>
                 </a>
@@ -460,6 +482,8 @@
                   class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-gray-50 hover:text-yellow-600"
                   href="https://tarhud.smartsystem.co.id/#/signin/"
                   target="_blank"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
                 >
                   Langsung Akses PSB<i class="fa-solid fa-angle-right ms-1"></i>
                 </a>
