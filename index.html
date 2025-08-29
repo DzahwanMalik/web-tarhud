@@ -18,9 +18,9 @@
     />
 
     <!-- AOS CSS -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-     <!-- AOS JS -->
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Main JS -->
@@ -37,23 +37,61 @@
   </head>
   <body id="home">
     <!-- CTA WhatsApp -->
-     <a href="https://wa.me/6285693415051" target="_blank" class="fixed z-30 bottom-10 right-10 size-14 text-white bg-green-400 rounded-full transition-all duration-300 ease-in-out animate-[var(--slideUp)] shadow-xl hover:-translate-y-1 hover:bg-white hover:text-green-400">
-      <i class="fa-brands fa-whatsapp absolute top-1/2 left-1/2 -translate-1/2 text-4xl"></i>
-     </a>
+    <a
+      href="https://wa.me/6285693415051"
+      target="_blank"
+      class="fixed z-30 bottom-10 right-10 size-14 text-white bg-green-400 rounded-full transition-all duration-300 ease-in-out animate-[var(--slideUp)] shadow-xl hover:-translate-y-1 hover:bg-white hover:text-green-400"
+    >
+      <i
+        class="fa-brands fa-whatsapp absolute top-1/2 left-1/2 -translate-1/2 text-4xl"
+      ></i>
+    </a>
 
-     <!-- Alert Fitur Belum Tersedia -->
-      <div class="fixed z-40 w-full h-full bg-[var(--transparentBlack)] -translate-y-full transition-all duration-300 ease-in-out" id="alertBg">
-        <div class="absolute z-50 top-1/2 left-1/2 -translate-1/2 scale-0 rounded-2xl bg-white p-10 text-3xl text-center shadow-xl transition-all duration-300 ease-in-out max-lg:text-sm max-lg:p-5" id="alertBox1">
-          <p class="mb-16 max-lg:mb-5">Maaf bangetttt nihhh... Fitur nya belum tersedia... Nanti mimin evaluasi lagi yaaaaa...😉</p>
-          <a class="p-5 border-2 border-yellow-600 text-yellow-600 text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:text-white hover:-translate-y-2 max-lg:text-xs max-lg:p-3" onclick="closeAlert()">Oke Minnn...👌</a>
-          <a class="p-5 border-2 border-yellow-600 bg-yellow-600 text-white text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:-translate-y-2 max-lg:text-xs max-lg:p-3" onclick="nextAlert()">Aku Mau Curhat Minnn...😭</a>
-        </div>
-        <div class="absolute z-50 top-1/2 left-1/2 -translate-1/2 scale-0 rounded-2xl bg-white p-10 text-3xl text-center shadow-xl transition-all duration-300 ease-in-out max-lg:text-sm max-lg:p-5" id="alertBox2">
-          <p class="mb-16 max-lg:mb-5">Okeyyy.. Langung aja klik tombol whatsApp di pojok kanan bawah yaaa... Atau bisa klik langsung tombol "Gas Ke Wa" dibawah..😍</p>
-          <a class="p-5 border-2 border-yellow-600 text-yellow-600 text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:text-white hover:-translate-y-2 max-lg:text-xs max-lg:p-3" onclick="closeAlert()">Siap Miminn Gantenggg...😘</a>
-          <a href="https://wa.me/6285693415051" target="_blank" class="p-5 border-2 border-yellow-600 bg-yellow-600 text-white text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:-translate-y-2 max-lg:text-xs max-lg:p-3"">Gas Ke Wa...😎</a>
-        </div>
+    <!-- Alert Fitur Belum Tersedia -->
+    <div
+      class="fixed z-40 w-full h-full bg-[var(--transparentBlack)] -translate-y-full transition-all duration-300 ease-in-out"
+      id="alertBg"
+    >
+      <div
+        class="absolute z-50 top-1/2 left-1/2 -translate-1/2 scale-0 rounded-2xl bg-white p-10 text-3xl text-center shadow-xl transition-all duration-300 ease-in-out max-lg:text-sm max-lg:p-5"
+        id="alertBox1"
+      >
+        <p class="mb-16 max-lg:mb-5">
+          Maaf bangetttt nihhh... Fitur nya belum tersedia... Nanti mimin
+          evaluasi lagi yaaaaa...😉
+        </p>
+        <a
+          class="p-5 border-2 border-yellow-600 text-yellow-600 text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:text-white hover:-translate-y-2 max-lg:text-xs max-lg:p-3"
+          onclick="closeAlert()"
+          >Oke Minnn...👌</a
+        >
+        <a
+          class="p-5 border-2 border-yellow-600 bg-yellow-600 text-white text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:-translate-y-2 max-lg:text-xs max-lg:p-3"
+          onclick="nextAlert()"
+          >Aku Mau Curhat Minnn...😭</a
+        >
       </div>
+      <div
+        class="absolute z-50 top-1/2 left-1/2 -translate-1/2 scale-0 rounded-2xl bg-white p-10 text-3xl text-center shadow-xl transition-all duration-300 ease-in-out max-lg:text-sm max-lg:p-5"
+        id="alertBox2"
+      >
+        <p class="mb-16 max-lg:mb-5">
+          Okeyyy.. Langung aja klik tombol whatsApp di pojok kanan bawah yaaa...
+          Atau bisa klik langsung tombol "Gas Ke Wa" dibawah..😍
+        </p>
+        <a
+          class="p-5 border-2 border-yellow-600 text-yellow-600 text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:text-white hover:-translate-y-2 max-lg:text-xs max-lg:p-3"
+          onclick="closeAlert()"
+          >Siap Miminn Gantenggg...😘</a
+        >
+        <a
+          href="https://wa.me/6285693415051"
+          target="_blank"
+          class="p-5 border-2 border-yellow-600 bg-yellow-600 text-white text-xl rounded-2xl shadow-md cursor-pointer transition-all duration-300 ease-in-out hover:bg-yellow-700 hover:-translate-y-2 max-lg:text-xs max-lg:p-3"
+          >Gas Ke Wa...😎</a
+        >
+      </div>
+    </div>
 
     <!-- Header -->
     <header class="">
@@ -62,7 +100,9 @@
         class="absolute z-20 w-full flex justify-center items-center font-semibold text-white transition-all duration-500 ease-in-out animate-[var(--slideDown)]"
         id="navbar"
       >
-        <div class="max-w-[1444px] w-full flex gap-20 justify-between items-center py-5 px-5">
+        <div
+          class="max-w-[1444px] w-full flex gap-20 justify-between items-center py-5 px-5"
+        >
           <div class="flex justify-center items-center max-w-48">
             <a href="#home"
               ><img
@@ -74,61 +114,191 @@
           </div>
           <div class="max-lg:hidden">
             <ul class="flex gap-10">
-              <li><a href="#home" class="cursor-pointer py-3 transition-colors duration-300 ease-in-out hover:text-yellow-600">Beranda</a></li>
+              <li>
+                <a
+                  href="#home"
+                  class="cursor-pointer py-3 transition-colors duration-300 ease-in-out hover:text-yellow-600"
+                  >Beranda</a
+                >
+              </li>
               <li class="relative">
-                <a href="#" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600" id="nav-profil">Profil<i class="fa-solid fa-angle-down ms-3"></i></a>
-                <div class="absolute top-10 -left-5 font-medium rounded-sm bg-white text-sm rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl" id="profil-dropdown">
-                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Profil Pondok</a>
-                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Profil Pendiri</a>
-                  <a class="cursor-pointer block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200" id="nav-profil-pimpinan">Profil Pimpinan <i class="fa-solid fa-angle-right"></i></a>
-                  <div class="absolute top-10 -right-44 font-medium rounded-sm bg-white rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl" id="profil-dropdown-pimpinan">
-                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Yayasan</a>
-                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Direktur TMI</a>
-                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Sekolah MA</a>
-                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Sekolah MTs</a>
-                    <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Kepala Sekolah MI</a>
+                <a
+                  href="#"
+                  class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600"
+                  id="nav-profil"
+                  >Profil<i class="fa-solid fa-angle-down ms-3"></i
+                ></a>
+                <div
+                  class="absolute top-10 -left-5 font-medium rounded-sm bg-white text-sm rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl"
+                  id="profil-dropdown"
+                >
+                  <a
+                    href=""
+                    class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                    >Profil Pondok</a
+                  >
+                  <a
+                    href=""
+                    class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                    >Profil Pendiri</a
+                  >
+                  <a
+                    class="cursor-pointer block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                    id="nav-profil-pimpinan"
+                    >Profil Pimpinan <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                  <div
+                    class="absolute top-10 -right-44 font-medium rounded-sm bg-white rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl"
+                    id="profil-dropdown-pimpinan"
+                  >
+                    <a
+                      href=""
+                      class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                      >Kepala Yayasan</a
+                    >
+                    <a
+                      href=""
+                      class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                      >Direktur TMI</a
+                    >
+                    <a
+                      href=""
+                      class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                      >Kepala Sekolah MA</a
+                    >
+                    <a
+                      href=""
+                      class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                      >Kepala Sekolah MTs</a
+                    >
+                    <a
+                      href=""
+                      class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                      >Kepala Sekolah MI</a
+                    >
                   </div>
                 </div>
               </li>
               <li class="relative">
-                <a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600" id="nav-gallery">Gallery<i class="fa-solid fa-angle-down ms-3"></i></a>
-                <div class="absolute top-10 -left-5 font-medium rounded-sm bg-white text-sm rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl" id="gallery-dropdown">
-                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Gallery Foto</a>
-                  <a href="" class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200">Gallery Video</a>
+                <a
+                  href="#"
+                  onclick="openAlert()"
+                  class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600"
+                  id="nav-gallery"
+                  >Gallery<i class="fa-solid fa-angle-down ms-3"></i
+                ></a>
+                <div
+                  class="absolute top-10 -left-5 font-medium rounded-sm bg-white text-sm rotate-x-90 opacity-0 transition-all duration-500 ease-in-out shadow-xl"
+                  id="gallery-dropdown"
+                >
+                  <a
+                    href=""
+                    class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                    >Gallery Foto</a
+                  >
+                  <a
+                    href=""
+                    class="block whitespace-nowrap text-gray-800 py-3 px-5 transition-colors duration-300 ease-in-out hover:bg-gray-200"
+                    >Gallery Video</a
+                  >
                 </div>
               </li>
-              <li><a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600">Berita</a></li>
-              <li><a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600">Pendaftaran</a></li>
-              <li><a href="#" onclick="openAlert()" class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600">Kontak</a></li>
+              <li>
+                <a
+                  href="#"
+                  onclick="openAlert()"
+                  class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600"
+                  >Berita</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="openAlert()"
+                  class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600"
+                  >Pendaftaran</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="openAlert()"
+                  class="cursor-pointer py-3 transition-all duration-300 ease-in-out hover:text-yellow-600"
+                  >Kontak</a
+                >
+              </li>
             </ul>
           </div>
           <div class="max-lg:hidden">
-            <a  
-                class="inline-block rounded border border-yellow-600 bg-yellow-600 px-5 py-3 font-medium text-white shadow-sm transition-colors cursor-pointer hover:bg-yellow-700"
-                href="https://tarhud.smartsystem.co.id/#/signin/"
-                target="_blank"
-              >
-                PSB TARHUD<i class="fa-solid fa-angle-right ms-1"></i>
-              </a>
+            <a
+              class="inline-block rounded border border-yellow-600 bg-yellow-600 px-5 py-3 font-medium text-white shadow-sm transition-colors cursor-pointer hover:bg-yellow-700"
+              href="https://tarhud.smartsystem.co.id/#/signin/"
+              target="_blank"
+            >
+              PSB TARHUD<i class="fa-solid fa-angle-right ms-1"></i>
+            </a>
           </div>
           <div class="w-full flex justify-end lg:hidden" id="hamburgerBtn">
             <i class="fa-solid fa-bars text-2xl"></i>
           </div>
         </div>
 
-          <!-- Nav Menu -->
-        <div class="bg-yellow-600 absolute top-full -translate-x-full z-20 w-full h-screen p-5 transition-all duration-500 ease-in-out" id="hamburgerMenu">
-          <ul class="flex flex-col gap-10 text-white" id="navList">
-            <li><a href="#home">Beranda</a></li>
-            <li>
-              <a onclick="openAlert()" class="cursor-pointer">Profil<i class="fa-solid fa-angle-down ms-3"></i></a>
+        <!-- Nav Menu -->
+        <div
+          class="bg-white absolute top-full -translate-x-full z-20 w-full h-screen transition-all duration-500 ease-in-out overflow-auto"
+          id="hamburgerMenu"
+        >
+          <ul class="flex flex-col text-gray-800" id="navList">
+            <li class="bg-white p-5"><a href="#home">Beranda</a></li>
+            <li class="relative bg-gray-100 p-5">
+              <a class="cursor-pointer" id="nav-profile-mobile"
+                >Profil<i
+                  class="fa-solid fa-angle-down ms-3 duration-500 ease-in-out"
+                  id="profile-dropdown-toggle"
+                ></i
+              ></a>
+              <div
+                class="relative left-10 top-5 flex flex-col gap-3 font-light mb-0 overflow-hidden h-0 transition-all duration-600 ease-in-out"
+                id="profile-dropdown-mobile"
+              >
+                <a href="">Profil Pondok</a>
+                <a href="">Profil Pendiri</a>
+                <a id="nav-profile-pimpinan-mobile"
+                  >Profil Pimpinan
+                  <i
+                    class="fa-solid fa-angle-down ms-2 duration-500 ease-in-out"
+                    id="profile-pimpinan-dropdown-toggle"
+                  ></i
+                ></a>
+                <div
+                  class="relative left-10 top-5 flex flex-col gap-3 font-light mb-0 overflow-hidden h-0 transition-all duration-600 ease-in-out"
+                  id="profile-pimpinan-dropdown-mobile"
+                >
+                  <a href="">Kepala Yayasan</a>
+                  <a href="">Direktur TMI</a>
+                  <a href="">Kepala Sekolah MA</a>
+                  <a href="">Kepala Sekolah MTs</a>
+                  <a href="">Kepala Sekolah MI</a>
+                </div>
+              </div>
             </li>
-            <li>
-              <a onclick="openAlert()" class="cursor-pointer">Gallery<i class="fa-solid fa-angle-down ms-3"></i></a>
+            <li class="bg-white p-5">
+              <a class="cursor-pointer" id="nav-gallery-mobile"
+                >Gallery<i class="fa-solid fa-angle-down ms-3" id="gallery-dropdown-toggle"></i>
+                <div
+                  class="relative left-10 top-5 flex flex-col gap-3 font-light mb-0 overflow-hidden h-0 transition-all duration-600 ease-in-out"
+                  id="gallery-dropdown-mobile"
+                >
+                  <a href="">Gallery Foto</a>
+                  <a href="">Gallery Video</a>
+                </div>
+              </a>
             </li>
-            <li><a onclick="openAlert()" class="cursor-pointer">Berita</a></li>
-            <li><a onclick="openAlert()" class="cursor-pointer">Pendaftaran</a></li>
-            <li><a onclick="openAlert()" class="cursor-pointer">Kontak</a></li>
+            <li class="bg-gray-100 p-5"><a onclick="openAlert()" class="cursor-pointer">Berita</a></li>
+            <li class="bg-white p-5">
+              <a onclick="openAlert()" class="cursor-pointer">Pendaftaran</a>
+            </li>
+            <li class="bg-gray-100 p-5"><a onclick="openAlert()" class="cursor-pointer">Kontak</a></li>
           </ul>
         </div>
       </nav>
@@ -252,7 +422,9 @@
               ></i>
             </div>
             <div class="text-start">
-              <h1 class="text-2xl font-bold max-lg:text-xl"><span data-count="200" class="counter">0</span>+ Pengajar</h1>
+              <h1 class="text-2xl font-bold max-lg:text-xl">
+                <span data-count="200" class="counter">0</span>+ Pengajar
+              </h1>
               <p class="text-sm text-gray-400 max-lg:text-xs">
                 Pengajar Berpengalaman
               </p>
@@ -265,7 +437,9 @@
               ></i>
             </div>
             <div class="text-start">
-              <h1 class="text-2xl font-bold max-lg:text-xl"><span data-count="1000" class="counter">0</span>+ Santri</h1>
+              <h1 class="text-2xl font-bold max-lg:text-xl">
+                <span data-count="1000" class="counter">0</span>+ Santri
+              </h1>
               <p class="text-sm text-gray-400 max-lg:text-xs">
                 Dari Berbagai Daerah
               </p>
@@ -278,7 +452,9 @@
               ></i>
             </div>
             <div class="text-start">
-              <h1 class="text-2xl font-bold max-lg:text-xl"><span data-count="850" class="counter">0</span>+ Alumni</h1>
+              <h1 class="text-2xl font-bold max-lg:text-xl">
+                <span data-count="850" class="counter">0</span>+ Alumni
+              </h1>
               <p class="text-sm text-gray-400 max-lg:text-xs">Yang Tersebar</p>
             </div>
           </div>
@@ -286,18 +462,26 @@
       </section>
 
       <!-- Swiper -->
-      <section class="relative col-span-2 w-full max-w-[1444px]" data-aos="fade-up">
+      <section
+        class="relative col-span-2 w-full max-w-[1444px]"
+        data-aos="fade-up"
+      >
         <div class="swiper">
-          <div class="card-wrapper mt-0 pb-16 pt-5 px-2 overflow-hidden md:mx-16">
+          <div
+            class="card-wrapper mt-0 pb-16 pt-5 px-2 overflow-hidden md:mx-16"
+          >
             <ul class="swiper-wrapper w-full">
               <li class="swiper-slide" data-aos="zoom-in-down">
-                <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
+                <a
+                  href=""
+                  class="block w-full bg-white shadow-xl p-5 rounded-2xl"
+                >
                   <div class="w-full h-80">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1684341008385-31d2eb4f3afe?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="w-full h-full object-cover rounded-2xl"
-                  />
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1684341008385-31d2eb4f3afe?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                      class="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   <h2
                     class="py-2 px-5 bg-blue-100 w-fit rounded-3xl text-blue-600 font-medium text-xs mt-4 mb-2"
@@ -317,14 +501,21 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="100">
-                <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
+              <li
+                class="swiper-slide"
+                data-aos="zoom-in-down"
+                data-aos-delay="100"
+              >
+                <a
+                  href=""
+                  class="block w-full bg-white shadow-xl p-5 rounded-2xl"
+                >
                   <div class="w-full h-80">
-                  <img
-                    src="https://images.unsplash.com/photo-1620764840976-a6752f359c46?q=80&w=1947&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="w-full h-full object-cover rounded-2xl"
-                  />
+                    <img
+                      src="https://images.unsplash.com/photo-1620764840976-a6752f359c46?q=80&w=1947&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                      class="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   <h2
                     class="py-2 px-5 bg-yellow-100 w-fit rounded-3xl text-yellow-600 font-medium text-xs mt-4 mb-2"
@@ -344,14 +535,21 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="200">
-                <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
+              <li
+                class="swiper-slide"
+                data-aos="zoom-in-down"
+                data-aos-delay="200"
+              >
+                <a
+                  href=""
+                  class="block w-full bg-white shadow-xl p-5 rounded-2xl"
+                >
                   <div class="w-full h-80">
-                  <img
-                    src="https://images.unsplash.com/photo-1587560699334-bea93391dcef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="w-full h-full object-cover rounded-2xl"
-                  />
+                    <img
+                      src="https://images.unsplash.com/photo-1587560699334-bea93391dcef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                      class="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   <h2
                     class="py-2 px-5 bg-green-100 w-fit rounded-3xl text-green-600 font-medium text-xs mt-4 mb-2"
@@ -371,14 +569,21 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="300">
-                <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
+              <li
+                class="swiper-slide"
+                data-aos="zoom-in-down"
+                data-aos-delay="300"
+              >
+                <a
+                  href=""
+                  class="block w-full bg-white shadow-xl p-5 rounded-2xl"
+                >
                   <div class="w-full h-80">
-                  <img
-                    src="assets/hero-banner/hero-banner-bg-2.jpg"
-                    alt=""
-                    class="w-full h-full object-cover rounded-2xl"
-                  />
+                    <img
+                      src="assets/hero-banner/hero-banner-bg-2.jpg"
+                      alt=""
+                      class="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   <h2
                     class="py-2 px-5 bg-red-100 w-fit rounded-3xl text-red-600 font-medium text-xs mt-4 mb-2"
@@ -398,14 +603,21 @@
                   </button>
                 </a>
               </li>
-              <li class="swiper-slide" data-aos="zoom-in-down" data-aos-delay="400">
-                <a href="" class="block w-full bg-white shadow-xl p-5 rounded-2xl">
+              <li
+                class="swiper-slide"
+                data-aos="zoom-in-down"
+                data-aos-delay="400"
+              >
+                <a
+                  href=""
+                  class="block w-full bg-white shadow-xl p-5 rounded-2xl"
+                >
                   <div class="w-full h-80">
-                  <img
-                    src="https://plus.unsplash.com/premium_photo-1682177060525-2ebe35aa1337?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="w-full h-full object-cover rounded-2xl"
-                  />
+                    <img
+                      src="https://plus.unsplash.com/premium_photo-1682177060525-2ebe35aa1337?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                      class="w-full h-full object-cover rounded-2xl"
+                    />
                   </div>
                   <h2
                     class="py-2 px-5 bg-gray-100 w-fit rounded-3xl text-gray-600 font-medium text-xs mt-4 mb-2"
@@ -436,108 +648,249 @@
       </section>
 
       <!-- Profile -->
-       <section class="max-w-[1444px] col-span-2 grid items-center grid-cols-1 gap-5 lg:grid-cols-2 mx-5">
-        <div class="relative h-full rounded-2xl overflow-hidden" id="video" data-aos="fade-right">
-          <img src="assets/profile/profile-bg.jpg" alt="" class="w-full h-full object-cover object-center">
-          <div class="video-transition absolute z-10 top-1/2 left-1/2 -translate-1/2 rotate-45 h-screen bg-white"></div>
+      <section
+        class="max-w-[1444px] col-span-2 grid items-center grid-cols-1 gap-5 lg:grid-cols-2 mx-5"
+      >
+        <div
+          class="relative h-full rounded-2xl overflow-hidden"
+          id="video"
+          data-aos="fade-right"
+        >
+          <img
+            src="assets/profile/profile-bg.jpg"
+            alt=""
+            class="w-full h-full object-cover object-center"
+          />
+          <div
+            class="video-transition absolute z-10 top-1/2 left-1/2 -translate-1/2 rotate-45 h-screen bg-white"
+          ></div>
         </div>
-        <div class="flex flex-col justify-center items-center lg:ps-10" data-aos="fade-left" data-aos-delay="600">
+        <div
+          class="flex flex-col justify-center items-center lg:ps-10"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        >
           <div>
-            <p class="font-semibold text-yellow-600 text-xs lg:text-xl">| Selamat Datang di Pondok Pesantren Tarbiyatul Huda</p>
-            <h1 class="font-bold text-2xl my-3 lg:text-5xl lg:my-6">Masa Depanmu Dimulai Dari Sini!</h1>
-            <p class="text-gray-500 text-xs leading-5 lg:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus deleniti sunt distinctio qui nobis doloremque soluta asperiores reprehenderit amet? Nulla, corporis. Illo saepe officia ipsum enim? Assumenda, aliquid recusandae iste error ex, laboriosam vitae temporibus aut rem harum repellat. Corporis debitis explicabo enim corrupti. Sint et eos, dicta facilis reprehenderit iste? Nam, sit? Illum harum quam illo dicta in?</p>
-            <ul class="flex flex-col gap-5 mt-5 text-xs font-semibold lg:text-xl">
-              <li><span class="text-white relative me-3 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-yellow-600 after:size-6 after:rounded-full"><i class="fa-solid fa-check relative z-10"></i></span>Program Madrasah Ibtida'iyah (Minimal Kelas 3)</li>
-              <li><span class="text-white relative me-3 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-yellow-600 after:size-6 after:rounded-full"><i class="fa-solid fa-check relative z-10"></i></span>Program Madrasah Tsanawiyah (6 Tahun)</li>
-              <li><span class="text-white relative me-3 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-yellow-600 after:size-6 after:rounded-full"><i class="fa-solid fa-check relative z-10"></i></span>Program Khusus Madrasah 'Aliyah (4 Tahun)</li>
+            <p class="font-semibold text-yellow-600 text-xs lg:text-xl">
+              | Selamat Datang di Pondok Pesantren Tarbiyatul Huda
+            </p>
+            <h1 class="font-bold text-2xl my-3 lg:text-5xl lg:my-6">
+              Masa Depanmu Dimulai Dari Sini!
+            </h1>
+            <p class="text-gray-500 text-xs leading-5 lg:text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              temporibus deleniti sunt distinctio qui nobis doloremque soluta
+              asperiores reprehenderit amet? Nulla, corporis. Illo saepe officia
+              ipsum enim? Assumenda, aliquid recusandae iste error ex,
+              laboriosam vitae temporibus aut rem harum repellat. Corporis
+              debitis explicabo enim corrupti. Sint et eos, dicta facilis
+              reprehenderit iste? Nam, sit? Illum harum quam illo dicta in?
+            </p>
+            <ul
+              class="flex flex-col gap-5 mt-5 text-xs font-semibold lg:text-xl"
+            >
+              <li>
+                <span
+                  class="text-white relative me-3 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-yellow-600 after:size-6 after:rounded-full"
+                  ><i class="fa-solid fa-check relative z-10"></i></span
+                >Program Madrasah Ibtida'iyah (Minimal Kelas 3)
+              </li>
+              <li>
+                <span
+                  class="text-white relative me-3 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-yellow-600 after:size-6 after:rounded-full"
+                  ><i class="fa-solid fa-check relative z-10"></i></span
+                >Program Madrasah Tsanawiyah (6 Tahun)
+              </li>
+              <li>
+                <span
+                  class="text-white relative me-3 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-yellow-600 after:size-6 after:rounded-full"
+                  ><i class="fa-solid fa-check relative z-10"></i></span
+                >Program Khusus Madrasah 'Aliyah (4 Tahun)
+              </li>
             </ul>
             <a
-                class="inline-block rounded border border-yellow-600 bg-yellow-600 px-5 py-3 mt-10 font-medium text-white shadow-sm transition-colors hover:bg-yellow-700"
-                href="#"
-              >
-                Pelajari Lebih Lanjut <i class="fa-solid fa-angle-right ms-1"></i>
-              </a>
+              class="inline-block rounded border border-yellow-600 bg-yellow-600 px-5 py-3 mt-10 font-medium text-white shadow-sm transition-colors hover:bg-yellow-700"
+              href="#"
+            >
+              Pelajari Lebih Lanjut <i class="fa-solid fa-angle-right ms-1"></i>
+            </a>
           </div>
         </div>
-       </section>
+      </section>
 
-       <!-- PSB -->
-        <section class="w-full col-span-2 flex justify-center bg-yellow-600 px-5 py-20">
-          <div class="max-w-[1444px] flex gap-5 flex-col justify-center items-center lg:flex-row">
-            <div class="basis-2/3 mb-5 lg:pr-10" data-aos="fade-up">
-              <h1 class="text-white text-4xl font-semibold mb-5 lg:text-6xl">Siap Bergabung dengan Tarbiyatul Huda?</h1>
-              <p class="text-white lg:text-xl">Daftarkan dirimu sekarang dan mulailah perjalanan akademik bersama Tarbiyatul Huda. Masa depan cemerlang ada di depan mata!</p>
+      <!-- PSB -->
+      <section
+        class="w-full col-span-2 flex justify-center bg-yellow-600 px-5 py-20"
+      >
+        <div
+          class="max-w-[1444px] flex gap-5 flex-col justify-center items-center lg:flex-row"
+        >
+          <div data-aos="fade-up" data-aos-offset="10">
+            <div class="basis-2/3 mb-5 lg:pr-10">
+              <h1 class="text-white text-4xl font-semibold mb-5 lg:text-6xl">
+                Siap Bergabung dengan Tarbiyatul Huda?
+              </h1>
+              <p class="text-white lg:text-xl">
+                Daftarkan dirimu sekarang dan mulailah perjalanan akademik
+                bersama Tarbiyatul Huda. Masa depan cemerlang ada di depan mata!
+              </p>
             </div>
             <div class="basis-1/3 lg:pl-10">
               <a
-                  class="inline-block rounded border border-yellow-600 bg-white px-5 py-3 font-medium text-yellow-600 shadow-sm transition-colors mb-3 hover:bg-yellow-700 hover:text-white"
-                  href="https://wa.me/6285693415051"
-                  target="_blank"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  Mau Konsultasi Dulu<i class="fa-solid fa-angle-right ms-1"></i>
-                </a>
-                <a
-                  class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-gray-50 hover:text-yellow-600"
-                  href="https://tarhud.smartsystem.co.id/#/signin/"
-                  target="_blank"
-                  data-aos="fade-up"
-                  data-aos-delay="600"
-                >
-                  Langsung Akses PSB<i class="fa-solid fa-angle-right ms-1"></i>
-                </a>
-              </div>
+                class="inline-block rounded border border-yellow-600 bg-white px-5 py-3 font-medium text-yellow-600 shadow-sm transition-colors mb-3 hover:bg-yellow-700 hover:text-white"
+                href="https://wa.me/6285693415051"
+                target="_blank"
+              >
+                Mau Konsultasi Dulu<i class="fa-solid fa-angle-right ms-1"></i>
+              </a>
+              <a
+                class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-gray-50 hover:text-yellow-600"
+                href="https://tarhud.smartsystem.co.id/#/signin/"
+                target="_blank"
+              >
+                Langsung Akses PSB<i class="fa-solid fa-angle-right ms-1"></i>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="py-10 px-5">
-       <div class="max-w-[1444px] grid gap-8 grid-cols-1 lg:justify-items-center m-auto mb-10 lg:grid-cols-4">
+      <div
+        class="max-w-[1444px] grid gap-8 grid-cols-1 lg:justify-items-center m-auto mb-10 lg:grid-cols-4"
+      >
         <div class="flex flex-col gap-5">
-          <a href="#home"><img src="assets/logo/TARHUD-LOGO-WARNA.png" alt="" width="200px"></a>
-          <p class="text-gray-500 text-sm leading-7">Jl. Veteran I Kp. Legok Nyenang Desa Pancawati Kec. Caringin Kab. Bogor Jawa Barat 16750.</p>
+          <a href="#home"
+            ><img src="assets/logo/TARHUD-LOGO-WARNA.png" alt="" width="200px"
+          /></a>
+          <p class="text-gray-500 text-sm leading-7">
+            Jl. Veteran I Kp. Legok Nyenang Desa Pancawati Kec. Caringin Kab.
+            Bogor Jawa Barat 16750.
+          </p>
           <div class="flex gap-3 justify-start items-center">
-            <a href="https://www.instagram.com/tarhud_official/" target="_blank" class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"><i class="fa-brands fa-instagram absolute top-1/2 left-1/2 -translate-1/2 text-2xl"></i></a>
-            <a href="https://www.youtube.com/@tarhudchannel" target="_blank" class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"><i class="fa-brands fa-youtube absolute top-1/2 left-1/2 -translate-1/2 text-2xl"></i></a>
-            <a href="https://www.tiktok.com/@tarhud.story?lang=id-ID" target="_blank" class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"><i class="fa-brands fa-tiktok absolute top-1/2 left-1/2 -translate-1/2 text-2xl"></i></a>
-            <a href="https://www.facebook.com/tarhud?locale=id_ID" target="_blank" class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"><i class="fa-brands fa-facebook-f absolute top-1/2 left-1/2 -translate-1/2 text-2xl"></i></a>
+            <a
+              href="https://www.instagram.com/tarhud_official/"
+              target="_blank"
+              class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"
+              ><i
+                class="fa-brands fa-instagram absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+              ></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@tarhudchannel"
+              target="_blank"
+              class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"
+              ><i
+                class="fa-brands fa-youtube absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+              ></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@tarhud.story?lang=id-ID"
+              target="_blank"
+              class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"
+              ><i
+                class="fa-brands fa-tiktok absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+              ></i
+            ></a>
+            <a
+              href="https://www.facebook.com/tarhud?locale=id_ID"
+              target="_blank"
+              class="size-10 bg-gray-100 rounded-full relative transition-all duration-300 ease-in-out hover:bg-yellow-600 hover:text-white"
+              ><i
+                class="fa-brands fa-facebook-f absolute top-1/2 left-1/2 -translate-1/2 text-2xl"
+              ></i
+            ></a>
           </div>
         </div>
         <div class="">
-          <div class="mb-5 text-2xl font-bold">
-            Informasi
-          </div>
+          <div class="mb-5 text-2xl font-bold">Informasi</div>
           <ul class="flex gap-3 flex-col text-sm text-gray-500">
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Kontak</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Berita</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">FAQs</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Galeri Foto</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Galeri Video</a></li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Kontak</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Berita</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Galeri Foto</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Galeri Video</a
+              >
+            </li>
           </ul>
         </div>
         <div class="">
-          <div class="mb-5 text-2xl font-bold">
-            Link Terkait
-          </div>
+          <div class="mb-5 text-2xl font-bold">Link Terkait</div>
           <ul class="flex gap-3 flex-col text-sm text-gray-500">
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Radjak Hospital Group</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Klinik Pratama dr. Abdul Rajak</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Pesadena Village</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Ngopi Lumubng Padi</a></li>
-            <li><a href="" class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600">Radjak Institue</a></li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Radjak Hospital Group</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Klinik Pratama dr. Abdul Rajak</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Pesadena Village</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Ngopi Lumubng Padi</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="transition-all duration-300 ease-in-out inline-block hover:translate-x-2 hover:text-yellow-600"
+                >Radjak Institue</a
+              >
+            </li>
           </ul>
         </div>
         <div class="">
-          <div class="mb-5 text-2xl font-bold">
-            Akreditasi
-          </div>
-          <img src="assets/akreditasi/AKREDITASI.png" alt="" width="150px">
+          <div class="mb-5 text-2xl font-bold">Akreditasi</div>
+          <img src="assets/akreditasi/AKREDITASI.png" alt="" width="150px" />
         </div>
       </div>
       <div class="max-w-[1444px] lg:col-span-4 text-gray-500 m-auto">
-        <hr class="text-gray-400 mb-5">
+        <hr class="text-gray-400 mb-5" />
         <div class="flex justify-between items-center">
           <span>&copy; Copyright 2025 All Right Reserved.</span>
           <span>Privacy Policy</span>
